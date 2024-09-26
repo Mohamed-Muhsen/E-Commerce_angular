@@ -1,0 +1,52 @@
+.cartBox {
+    background-color: #fff;
+    padding: 50px 50px;   
+}
+
+.cartBox img {
+    width: 100%;
+}
+
+.priceBox {
+    background-color: #fff;
+    padding: 30px 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .cartBox img {
+        width: 50%;
+    }
+}
+
+
+.custom-toast {
+    position: fixed;
+    bottom: 10px; 
+    right: 10px; 
+    background-color: #00b09b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+input[type="number"] {
+    text-align: center;
+    width: 60px; 
+}

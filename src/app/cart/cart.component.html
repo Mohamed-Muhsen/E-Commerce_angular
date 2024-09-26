@@ -1,0 +1,103 @@
+<app-navbar [cartCount]="totalCart"></app-navbar>
+<main class="container mt-5 mb-5">
+
+  <div class="bg-white text-center fw-bold mt-5 p-5" *ngIf="totalCart == 0">
+    <h4>Cart is empty!</h4>
+  </div>
+
+  <div class="row" *ngIf="totalCart > 0">
+
+    <div class="col-lg-8 col-12 cartBox">
+      <div class="row mt-5 mb-5" *ngFor="let data of getCartData">
+        <div class="col-lg-2">
+          <img src="{{data.pdImg}}">
+        </div>
+        <div class="col-lg-10">
+          <h5>{{data.pdName}}</h5>
+          <p class="mt-2 mb-3">{{data.pdPrice | number}}<span><i class="bi bi-currency-dollar"></i></span></p>
+          <button class="btn btn-sm btn-primary" (click)="removeCart(data)"><i class="bi bi-trash"></i> Remove</button>
+
+          <div class="mt-2 mb-2 d-flex align-items-center">
+            <button class="btn btn-sm btn-primary" [disabled]="data.plusMinusCounter <= 1"
+              (click)="plusMinusCount(data, 'minus')">-</button>
+            <input type="number" class="form-control mx-2" [(ngModel)]="data.plusMinusCounter" disabled>
+            <button class="btn btn-sm btn-primary" [disabled]="data.plusMinusCounter >= 5"
+              (click)="plusMinusCount(data, 'plus')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-12 mt-5">
+      <div class="priceBox">
+        <h5 class="fw-bold">Price Details</h5>
+        <hr>
+        <p class="mt-2 mb-2">
+          <span class="float-start">Price ({{totalCart}})</span>
+          <span class="float-end">{{totalAmount | number}}<i class="bi bi-currency-dollar"></i> </span>
+        </p>
+        <div class="clearfix"></div>
+        <p class="mt-2 mb-2">
+          <span class="float-start">Delivery</span>
+          <span class="float-end">Free</span>
+        </p>
+        <div class="clearfix"></div>
+        <hr>
+
+        <div class="mb-3">
+          <label for="promo-code" class="form-label">Promo Code</label>
+          <input type="text" id="promo-code" [(ngModel)]="promoCode" class="form-control"
+            placeholder="Enter promo code" />
+          <button type="button" class="btn btn-primary mt-2" (click)="applyPromoCode()">Apply Promo Code</button>
+
+          <div class="custom-toast" *ngIf="showToast">
+            {{ toastMessage }}
+          </div>
+        </div>
+
+        <p class="mt-2 mb-2 fw-bold">
+          <span class="float-start">Total Amount</span>
+          <span class="float-end">{{finalAmount | number}}<i class="bi bi-currency-dollar"></i> </span>
+        </p>
+        <div class="clearfix mb-5"></div>
+
+        <button type="button" class="btn btn-md btn-primary col-12" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Place Order <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Order</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Enter Email Id</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Enter Address</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+            <div class="mb-3">
+              <input type="radio" checked> <label> Cash on Delivery </label>
+            </div>
+            <div class="mb-3">
+              <h5>Total Amount : {{this.totalAmount | number}}</h5>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="orderClick()">Order
+            Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

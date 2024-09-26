@@ -1,0 +1,122 @@
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: rgb(149, 149, 149);
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#newsletter p span {
+    color: #007bff;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+button.normal {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+#newsletter input {
+    height: 3.300rem;
+    padding: 0 1.20em;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+    background-color: #007bff;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 992px) {
+    #newsletter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newsletter .form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #newsletter h4 {
+        font-size: 20px;
+    }
+
+    #newsletter p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #newsletter h4 {
+        font-size: 18px;
+    }
+
+    #newsletter p {
+        font-size: 12px;
+    }
+
+    #newsletter .form {
+        flex-direction: column;
+    }
+
+    #newsletter input {
+        margin-bottom: 10px;
+    }
+}

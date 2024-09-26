@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<main class="container-fluid my-5">
+    <div class="row gx-5">
+        <div class="col-lg-3 col-12 filter-section p-4 shadow-sm">
+            <h5 class="filter-title text-uppercase">Filter Products</h5>
+            <div class="mt-4">
+                <p class="text-muted">Category: <strong>{{ getParamValue | titlecase }}</strong></p>
+            </div>
+            <div class="mt-4">
+                <label class="form-label">Subcategory</label>
+                <select class="form-select form-select-sm shadow-sm" (change)="filterSelect($event)">
+                    <option value="all">All</option>
+                    <option *ngFor="let data of getSubCategoryOption" value="{{ data.subcategories }}">
+                        {{ data.subcategories }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-lg-9 col-12">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let data of filterProductData">
+                    <div class="product-card h-100 shadow-lg">
+                        <div class="product-image">
+                            <img src="{{ data.pdImg }}" alt="{{ data.pdName }}" class="w-100">
+                        </div>
+                        <div class="product-info p-4">
+                            <h4 class="product-title">{{ data.pdName }}</h4>
+                            <p class="product-description text-muted">{{ data.pdDesc }}</p>
+                            <p class="product-price text-primary">
+                                {{ data.pdPrice | number }} <i class="bi bi-currency-dollar"></i>
+                            </p>
+                            <a class="btn btn-outline-primary w-100 btn-view-product"
+                                [routerLink]="['/product-detail', data.pdCategory, data.pdId]">
+                                View Product <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

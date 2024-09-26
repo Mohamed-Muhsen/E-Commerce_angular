@@ -1,0 +1,186 @@
+.section-p1{
+    padding: 40px 80px;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.foot{
+    padding-top: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: gray;
+    margin-bottom: 10px;
+}
+#acc{
+    font-weight: bold;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #565656;
+    padding-right: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer .follow i:nth-child(1):hover {
+    font-size: 35px;
+    color: #1877F2;
+    transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+}
+
+footer .follow i:nth-child(2):hover {
+    font-size: 35px; 
+    color: #1DA1F2; 
+    transition: all 0.8s ease;
+
+    
+}
+
+footer .follow i:nth-child(3):hover {
+    font-size: 35px; 
+    color: #007bff; 
+    transition: all 0.8s ease;
+}
+
+footer .follow i:nth-child(4):hover {
+    font-size: 35px; 
+    transition: all 0.8s ease;
+    color: #BD081C; 
+}
+
+footer .follow i:nth-child(5):hover {
+    font-size: 35px; 
+    color: #FF0000; 
+    transition: all 0.8s ease;
+}
+
+footer .follow i:nth-child(6):hover {
+    font-size: 35px; 
+    color: #FFFC00; 
+    transition: all 0.8s ease;
+}
+
+footer .follow i:nth-child(7):hover {
+    font-size: 35px; 
+    color: #0077B5; 
+    transition: all 0.8s ease;
+}
+
+footer .install .row img{
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 130px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #007bff;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+#mohsen{
+    font-weight: bold;
+    font-size: 20px;
+    color: #565656;
+}
+
+#mohsen span{
+    color: #007bff;
+}
+#mohsen i.fa-whatsapp {
+    font-size: 25px; 
+}
+
+#mohsen i.fa-whatsapp:hover {
+    font-size: 35px; 
+    color: #25D366; 
+}
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 20px 30px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .col {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    footer .col:nth-child(1),
+    footer .col:nth-child(2) {
+        display: inline-block;
+        width: 45%;
+        margin-right: 5%;
+    }
+    footer .col:nth-child(2) {
+        margin-right: 0;
+    }
+    footer .install .row img {
+        width: 100px;
+    }
+    footer .copyright {
+        text-align: center;
+        font-size: 12px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    footer h4 {
+        font-size: 12px;
+    }
+    footer .follow i {
+        font-size: 20px;
+    }
+    #mohsen {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 477px) {
+    footer .install .row img {
+        width: 80px;
+    }
+    footer .follow i {
+        padding-right: 4px;
+    }
+}
