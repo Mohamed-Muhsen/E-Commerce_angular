@@ -43,13 +43,14 @@ Make sure you have the following installed:
    
 2. **Install Dependencies**:
 
-npm install
+  npm install
 
 3. **Run the Application**:
    
-ng serve
+  ng serve
 
 4. Access the Application: Open your browser and navigate to http://localhost:4200/.
+
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
