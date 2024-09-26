@@ -1,8 +1,8 @@
 # E-Commerce Application
-
-![E-Commerce Logo](https://via.placeholder.com/150) <!-- You can replace this link with an appropriate image -->
+![logo](https://github.com/user-attachments/assets/93c38a35-ba6c-4316-b23f-61c4e7e3b5c4)
 
 ## Description
+
 
 This is an E-Commerce web application built using **Angular**. The application is designed to provide a user-friendly shopping experience with a clean and modern interface. It utilizes **Bootstrap** for responsive design, **TypeScript** for robust programming, and **Font Awesome** for elegant icons.
 
@@ -43,14 +43,15 @@ Ensure you have the following installed on your machine:
 ### Installation Steps
 
 1. **Clone the Repository**:
-   ```bash
    git clone https://github.com/Mohamed-Muhsen/E-Commerce_angular.git
-   cd e-commerce
+   cd E-Commerce_angular
+   
 2. **Install Dependencies**:
 npm install
 
 3 **Run the Application**:
 ng serve
+
 4. Access the Application: Open your browser and navigate to http://localhost:4200/.
 
 ### License
