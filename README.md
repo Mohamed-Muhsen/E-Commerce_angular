@@ -49,7 +49,7 @@ Ensure you have the following installed on your machine:
 2. **Install Dependencies**:
 npm install
 
-3 **Run the Application**:
+3. **Run the Application**:
 ng serve
 
 4. Access the Application: Open your browser and navigate to http://localhost:4200/.
