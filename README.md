@@ -37,16 +37,19 @@ Make sure you have the following installed:
 
 ### Installation Steps
 1. **Clone the Repository**:
+
    git clone https://github.com/Mohamed-Muhsen/E-Commerce_angular.git
    cd E-Commerce_angular
    
 2. **Install Dependencies**:
+
 npm install
 
 3. **Run the Application**:
+   
 ng serve
 
-5. Access the Application: Open your browser and navigate to http://localhost:4200/.
+4. Access the Application: Open your browser and navigate to http://localhost:4200/.
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
